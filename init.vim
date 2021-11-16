@@ -37,3 +37,10 @@ call plug#begin('~/.config/nvim')
 call plug#end()
 
 colorscheme dracula
+
+"CUSTOM BINDINGS
+let g:mapleader = ","
+let g:maplocalleader = ","
+
+nmap <c-q> :wq<CR>
+nmap <c-s> :w<CR>
