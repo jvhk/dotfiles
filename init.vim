@@ -30,17 +30,25 @@ call plug#begin('~/.config/nvim')
  Plug 'dracula/vim'
  Plug 'ryanoasis/vim-devicons'
  Plug 'honza/vim-snippets'
- Plug 'kdheepak/lazygit.nvim'
  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
  Plug 'nvim-lua/completion-nvim'
  Plug 'preservim/nerdtree'
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'APZelos/blamer.nvim'
+ Plug 'jiangmiao/auto-pairs'
+ Plug 'kdheepak/lazygit.nvim'
 call plug#end()
 
 colorscheme dracula
 
-"CUSTOM BINDINGS
-let g:mapleader = ","
-let g:maplocalleader = ","
+"BINDINGS
+let g:mapleader = "c"
+let g:maplocalleader = "c"
 
 nmap <c-q> :wq<CR>
 nmap <c-s> :w<CR>
+
+let g:blamer_enabled = 1
+let g:blamer_delay = 0
+highlight Blamer guifg=lightgrey
+
